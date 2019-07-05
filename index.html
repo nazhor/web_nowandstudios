@@ -1,10 +1,3 @@
-<?php
-require_once 'Mobile_Detect.html';
-$detect = new Mobile_Detect;
-$esMovil = $detect->isMobile();
-
-$ua = $_SERVER["HTTP_USER_AGENT"];      // Get user-agent of browser
-?>
 <!--
  __    __                  __       __                            __         ______    __                      __  __
 /  \  /  |                /  |  _  /  |                          /  |       /      \  /  |                    /  |/  |
@@ -36,27 +29,6 @@ $$/   $$/  $$$$$$/        $$/      $$/  $$$$$$$/ $$/   $$/  $$$$$$$/        $$$$
 		<script defer src="js/fontawesome.min.js"></script>
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="images/favicon.ico">
-		<!--=============== Cookies ================-->
-		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
-		<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-		<script>
-		window.addEventListener("load", function(){
-		window.cookieconsent.initialise({
-		  "palette": {
-			"popup": {
-			  "background": "#000000"
-			},
-			"button": {
-			  "background": "#ff7a00"
-			}
-		  },
-		  "theme": "edgeless",
-		  "content": {
-			"message": "This website uses cookies (COOOOKIIIIEEEEESSSSS!!!!!!) to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. But you won't. ¯\\_(ツ)_/¯",
-			"href": "http://www.nowandstudios.com/privacy.html"
-		  }
-		})});
-		</script>
     </head>
     <body>
         <!-- loader -->
@@ -103,32 +75,17 @@ $$/   $$/  $$$$$$/        $$/      $$/  $$$$$$$/ $$/   $$/  $$$$$$$/        $$$$
             <div id="wrapper">
                 <!-- content-holder  -->
                 <div class="content-holder">
-					<?php
-					if(!$esMovil){ ?>
-						<!------- Video -------->
-						<div class="content full-height" id="sec1">
-							<div class="hero-wrap">
-								<div class="media-container" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);">
-									<div class="video-mask"></div>
-									<!--=============== add you video id  in data-vid="" if you want add sound change data-mv="1" on data-mv="0" ===============-->
-									<div class="mob-bg bg" data-bg="images/bg/1.jpg"></div>
-									<div class="background-youtube" data-vid="MlH6QfNumS8" data-mv="1"> </div>
-								</div>
-							  <a href="#sec2" class="hero-scroll-link custom-scroll-link" data-top-bottom="transform: translateY(50px);" data-bottom-top="transform: translateY(-50px);"><i class="fa fa-angle-down"></i></a>
-							</div>
-						</div>
-						<!------- Video end ---->
-					<?php
-					}else{?>
-						<!------- Image -------->
-						<div class="hero-wrap">
-							<div class="bg"  data-bg="images/movil.jpg" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
-							<a href="#sec2" class="hero-scroll-link custom-scroll-link" data-top-bottom="transform: translateY(50px);" data-bottom-top="transform: translateY(-50px);"><i class="fa fa-angle-down"></i></a>
-						</div>
-						<!------- Image end ---->
-					<?php
-					}
-					?>
+                    <div class="content full-height">
+                        <!-- Hero section   -->
+                        <div class="hero-wrap">
+                            <!-- Hero image   -->
+                            <div class="bg"  data-bg="images/movil.jpg" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                            <!-- Hero image   end -->
+                            <div class="overlay"></div>
+                            <a href="#sec2" class="hero-scroll-link custom-scroll-link" data-top-bottom="transform: translateY(50px);" data-bottom-top="transform: translateY(-50px);"><i class="fa fa-angle-down"></i></a>
+                        </div>
+                        <!-- Hero section   end -->
+                    </div>
                     <!---- content GAMES ------>
                     <div class="content" id="sec2">
                         <section>
@@ -152,7 +109,7 @@ $$/   $$/  $$$$$$/        $$/      $$/  $$$$$$$/ $$/   $$/  $$$$$$$/        $$$$
 										<div class="col-md-6">
 											<a href="http://theroseofjerichobar.com/" target="_blank">
 												<div class="juegicos">
-													<img class="image" src="images/games/_portadas/6_HelloMyNameIsNobody.jpg" alt="Hello My Name is Nobody" >
+													<img class="image" src="images/games/portadas/6_HelloMyNameIsNobody.jpg" alt="Hello My Name is Nobody" >
 													<div class="overlayG">
 														<div class="text">
 															<p>HELLO, MY NAME IS NOBODY</p>
@@ -167,7 +124,7 @@ $$/   $$/  $$$$$$/        $$/      $$/  $$$$$$$/ $$/   $$/  $$$$$$$/        $$$$
 										<div class="col-md-6">
 											<a href="http://www.thefalloflazarus.com/" target="_blank">
 												<div class="juegicos">
-													<img class="image" src="images/games/_portadas/5_TheFallofLazarus.jpg" alt="The Fall of Lazarus" >
+													<img class="image" src="images/games/portadas/5_TheFallofLazarus.jpg" alt="The Fall of Lazarus" >
 													<div class="overlayG">
 														<div class="text">
 															<p>THE FALL OF LAZARUS</p>
@@ -185,7 +142,7 @@ $$/   $$/  $$$$$$/        $$/      $$/  $$$$$$$/ $$/   $$/  $$$$$$$/        $$$$
 										<div class="col-md-6">
 											<a href="jams.html">
 												<div class="juegicos">
-													<img class="image" src="images/games/_portadas/0_Jams.jpg" alt="Game jams" >
+													<img class="image" src="images/games/portadas/0_Jams.jpg" alt="Game jams" >
 													<div class="overlayG">
 														<div class="text">
 															<h3>GAME JAMS</h3>
@@ -199,7 +156,7 @@ $$/   $$/  $$$$$$/        $$/      $$/  $$$$$$$/ $$/   $$/  $$$$$$$/        $$$$
 										<div class="col-md-6">
 											<a href="#">
 												<div class="juegicos">
-													<img class="image" src="images/games/_portadas/7_.jpg" alt="" >
+													<img class="image" src="images/games/portadas/7_.jpg" alt="" >
 													<div class="overlayG">
 														<div class="text">
 															<h3>DREAMSCAPE PROJECT</h3>
@@ -386,7 +343,6 @@ $$/   $$/  $$$$$$/        $$/      $$/  $$$$$$$/ $$/   $$/  $$$$$$$/        $$$$
                                                     <h4>Find Us On : </h4>
                                                     <ul>
 														<li><a href="https://twitter.com/NoWandStudios" target="_blank" ><i class="fab fa-twitter"></i> Twitter</a></li>
-														<li><a href="https://www.facebook.com/nowandstudios" target="_blank" ><i class="fab fa-facebook"></i> Facebook</a></li>
 														<li><a href="https://www.youtube.com/c/nowandstudios" target="_blank" ><i class="fab fa-youtube"></i> Youtube</a></li>
                                                     </ul>
                                                 </div>
@@ -414,19 +370,6 @@ $$/   $$/  $$$$$$/        $$/      $$/  $$$$$$$/ $$/   $$/  $$$$$$$/        $$$$
                                 </div>
                             </div>
 							<p></p>
-							<!-- Begin MailChimp Signup Form -->
-							<div id="mc_embed_signup">
-								<form action="https://nowandstudios.us1.list-manage.com/subscribe/post?u=9f5bcab088265197906801271&amp;id=5473c01665" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_self" class="validate" novalidate>
-									<div id="mc_embed_signup_scroll">
-										<label for="mce-EMAIL">Oh! Hi there! What are you doing down here? If you made all the way down our page you must be really interested in our stuff, right? Say no more! Sign up for our newsletter and we promise to keep you updated (but not too much updated!).</label>
-										<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-										<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-										<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9f5bcab088265197906801271_5473c01665" tabindex="-1" value=""></div>
-										<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-									</div>
-								</form>
-							</div>
-							<!--End mc_embed_signup-->
                             <!-- Footer copyright -->
                             <div class="row">
                                 <div class="col-md-12">
